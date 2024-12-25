@@ -3,7 +3,11 @@
 _An implementation of the Ising Model in Python. This project has been made following several tutorials in Statistical Mechanics and Computational Methods._
 
 ## Project overview
-The Ising Model is used to model the behaviour of interacting particles. In this specific project it has been used to model the energy of a system consisting of spin-up and sping-down particles. Consider a system with initial properties : 
+The Ising Model is used to model the behaviour of interacting particles. In this specific project it has been used to model the energy of a system consisting of spin-up and sping-down particles. We first define a function that returns a random state with the state-size and probabilities pre-defined by the user.
+
+```
+import numpy as np
+```
 
 ```
 #Creates a square matrix of side N wirh P% up-spins
@@ -18,8 +22,15 @@ def create_random_state(N,P):
     return random_array
 ```
 
+```
+create_random_state(10,50)
+```
+
 ![Image : 10X10 random spin matrix](https://github.com/poppitypopper/ising-model/blob/main/state-charts/Figure_*1.png)
 
+We define the "energy" of a particle in this system by summing up the spin values of its cardinal neighbours. 
+
+$ \sigma $
 
 
 
