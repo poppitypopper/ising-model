@@ -3,7 +3,7 @@
 _An implementation of the Ising Model in Python. This project has been made following several tutorials in Statistical Mechanics and Computational Methods._
 
 ## Project overview
-The Ising Model is used to model the behaviour of interacting particles. In this specific project it has been used to model the energy of a system consisting of spin-up and sping-down particles. In this model, the energy of a particle in a system is taken to be a function of the spins of the particles in it's neighbourhood. What the simulation below aims to show is that in a temperature bath (T), there is an equilibrium state where the total energy of the system stabilises.
+The Ising Model is used to model the behaviour of interacting particles. Here it has been used to model the energy of a system consisting of spin-up and sping-down particles. In this model, the energy of a particle in a system is taken to be a function of the spins of the particles in it's neighbourhood. What the simulation below aims to show is that in a temperature bath (T), there is an equilibrium state where the total energy of the system stabilises.
 
 ## Explaining The Code
 
@@ -39,7 +39,7 @@ We define the energy of each particle in our system as the sum of the spins of i
 
 ![Image : 10X10 random spin matrix](https://github.com/poppitypopper/ising-model/blob/main/state-charts/Frame_4***.png)
 
-To calculate the energy of a state, we simply sum up the energies of the constituent particles. This becomes computationally taxing as our states grow in size, or if our problem grows in dimensions. Instead of the naive approach, we utilise the convolve function in the SciPy library.
+To calculate the energy of a state, we simply sum up the energies of the constituent particles. This becomes computationally taxing as our states grow in size, or if our problem grows in dimensions. Instead, we convolve a kernel with our matrix to get an array with the energies of each particle.
 
 ```python3
 from scipy.ndimage import generate_binary_structure, convolve
