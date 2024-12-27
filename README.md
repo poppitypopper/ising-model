@@ -15,7 +15,7 @@ import numpy as np
 ```
 
 ```python3
-#Creates a square matrix of side N wirh P% up-spins
+#Creates a square matrix of side N with P% up-spins
 def create_random_state(N,P):
     random_array = np.random.random((N,N))
     for i in range(N):
